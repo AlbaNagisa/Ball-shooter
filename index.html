@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ball Shooter</title>
+  </head>
+  <body>
+    <div class="fixed text-white text-sm ml-2 select-none">
+      <span>Score : </span><span id="score">0</span>
+    </div>
+    <div class="fixed text-white text-sm ml-2 mt-5 select-none">
+      <span>High score : </span><span id="highScore">0</span>
+    </div>
+
+    <div
+      id="UI"
+      class="fixed inset-0 flex items-center justify-center select-none"
+    >
+      <div class="bg-white max-w-md w-full p-6 text-center">
+        <h1
+          id="highscoreEl"
+          class="text-4xl bg-white fonct bold leading-none"
+        ></h1>
+        <h1 id="newScore" class="text-4xl bg-white fonct bold leading-none">
+          0
+        </h1>
+        <p class="text-sm bg-white text-gray-700 mb-4">Points</p>
+        <div class="bg-white">
+          <button
+            id="button"
+            class="bg-blue-500 text-white w-full py-3 rounded-full text-sm"
+          >
+            Start game
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <canvas></canvas>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./class/Projectile.js"></script>
+    <script src="./class/Enemy.js"></script>
+    <script src="./class/Particle.js"></script>
+    <script src="./class/Player.js"></script>
+    <script src="./functions.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
